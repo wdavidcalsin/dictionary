@@ -11,7 +11,7 @@ const SearchWord = () => {
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                paddingY: '5rem',
+                paddingBottom: '5rem',
                 bgcolor: 'primary.main',
             }}
         >
@@ -23,6 +23,7 @@ const SearchWord = () => {
                         md: '50rem',
                         lg: '50rem',
                     },
+                    paddingX: '1rem',
                 }}
             >
                 <TextField
@@ -31,13 +32,42 @@ const SearchWord = () => {
                     type="contrastText"
                     name="search"
                     onChange={handleSearchWord}
+                    InputLabelProps={{
+                        classes: {
+                            focused: classes.label,
+                        },
+                    }}
                     InputProps={{
-                        className: classes.root,
+                        classes: {
+                            focused: classes.label,
+                            notchedOutline: classes.root,
+                        },
+                    }}
+                    sx={{
+                        width: {
+                            xs: '100%',
+                            sm: '20rem',
+                            md: '30rem',
+                            lg: '30rem',
+                        },
                     }}
                 />
                 <Button
                     variant="outlined"
-                    sx={{ color: 'secondary.contrastText' }}
+                    color="secondary"
+                    sx={{
+                        color: 'secondary.contrastText',
+                        bgcolor: 'secondary.main',
+                        height: {
+                            xs: '3rem',
+                            sm: '100%',
+                        },
+                        marginY: {
+                            xs: '1rem',
+                            sm: '0',
+                        },
+                        marginX: '1rem',
+                    }}
                 >
                     Search
                 </Button>

@@ -24,7 +24,7 @@ const NavbarHeader = () => {
                 alignContent: 'center',
                 alignItems: 'center',
                 bgcolor: 'primary.main',
-                height: '5rem',
+                paddingTop: '1rem',
                 width: '100%',
             }}
         >
