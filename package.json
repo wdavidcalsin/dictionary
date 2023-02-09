@@ -9,7 +9,8 @@
         "lint": "eslint \"*/**/*.{js,ts,tsx}\" --fix",
         "preview": "vite preview",
         "format": "pnpm run prettier --write",
-        "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\""
+        "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css,md}\"",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@emotion/react": "^11.10.5",
@@ -19,6 +20,7 @@
         "@mui/styled-engine-sc": "^5.11.0",
         "@mui/styles": "^5.11.7",
         "cheerio": "1.0.0-rc.12",
+        "husky": "^8.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "styled-components": "^5.3.6"
@@ -36,6 +38,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "prettier": "^2.8.4",
         "typescript": "^4.9.3",
-        "vite": "^4.1.0"
+        "vite": "^4.1.0",
+        "husky": "^8.0.0"
     }
 }
