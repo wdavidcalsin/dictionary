@@ -3,7 +3,7 @@ import { useStylesInput } from '@/styles';
 import { Box, Button, TextField } from '@mui/material';
 
 const SearchWord = () => {
-    const { handleSearchWord } = useSearchWord();
+    const { handleChangeSearchWord, handleClickSearchWord } = useSearchWord();
 
     const classes = useStylesInput();
     return (
@@ -31,7 +31,7 @@ const SearchWord = () => {
                     label="Search word"
                     type="contrastText"
                     name="search"
-                    onChange={handleSearchWord}
+                    onChange={handleChangeSearchWord}
                     InputLabelProps={{
                         classes: {
                             focused: classes.label,
@@ -53,6 +53,7 @@ const SearchWord = () => {
                     }}
                 />
                 <Button
+                    onClick={handleClickSearchWord}
                     variant="outlined"
                     color="secondary"
                     sx={{
