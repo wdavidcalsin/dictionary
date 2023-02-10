@@ -34,5 +34,3 @@ export const ThemeContextProvider: React.FC<Props> = ({ children }) => {
         </colorModeContext.Provider>
     );
 };
-
-export const useColorMode = () => React.useContext(colorModeContext);

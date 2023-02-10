@@ -1,4 +1,4 @@
-import { useColorMode } from '@/context';
+import { useColorMode } from '@/hooks';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { Box, Fade, IconButton, Zoom } from '@mui/material';

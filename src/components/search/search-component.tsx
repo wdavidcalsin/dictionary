@@ -1,4 +1,4 @@
-import { useSearchWord } from '@/context';
+import { useSearchWord } from '@/hooks';
 import { useStylesInput } from '@/styles';
 import { Box, Button, TextField } from '@mui/material';
 

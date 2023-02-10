@@ -1,10 +1,16 @@
-import { Layout, LogoDictionary, SearchWord } from '@/components';
+import {
+    Layout,
+    LogoDictionary,
+    SearchWord,
+    ShowWordFound,
+} from '@/components';
 
 const Home = () => {
     return (
         <Layout>
             <LogoDictionary />
             <SearchWord />
+            <ShowWordFound />
         </Layout>
     );
 };

@@ -1,1 +1,1 @@
-export { default as SearchWord } from './search-word';
+export { default as SearchWord } from './search-component';

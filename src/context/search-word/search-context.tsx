@@ -1,4 +1,4 @@
-import { getDictionaryDefinitionWord } from '@/services';
+import { searchConstant } from '@/constants';
 import { ISearchContext, Props } from '@/types';
 import * as React from 'react';
 
@@ -6,26 +6,19 @@ export const searchWordContext = React.createContext<ISearchContext>({
     handleChangeSearchWord: () => null,
     handleClickSearchWord: () => null,
     searchWord: '',
+    wordFound: [],
 });
 
 export const SearchWordContextProvider: React.FC<Props> = ({ children }) => {
     const [word, setWord] = React.useState<string>('');
+    const [definitions, setDefinitions] = React.useState<string[]>([]);
 
-    const search: ISearchContext = {
-        handleChangeSearchWord: (event) => {
-            setWord(event.target.value);
-        },
-
-        handleClickSearchWord: async () => {
-            const definition = await getDictionaryDefinitionWord(word);
-
-            if (definition) {
-                definition.map((index, word) => console.log(word));
-            }
-        },
-
-        searchWord: word,
-    };
+    const search = searchConstant({
+        word,
+        setWord,
+        definitions,
+        setDefinitions,
+    });
 
     return (
         <searchWordContext.Provider value={search}>
@@ -33,5 +26,3 @@ export const SearchWordContextProvider: React.FC<Props> = ({ children }) => {
         </searchWordContext.Provider>
     );
 };
-
-export const useSearchWord = () => React.useContext(searchWordContext);
