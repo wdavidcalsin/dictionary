@@ -67,7 +67,10 @@ const SearchWord = () => {
                             xs: '1rem',
                             sm: '0',
                         },
-                        marginX: '1rem',
+                        marginLeft: {
+                            xs: '0',
+                            sm: '1rem',
+                        },
                     }}
                 >
                     Search

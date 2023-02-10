@@ -15,6 +15,10 @@ export const getDesignTokens = (mode: themeMode) => ({
                   border: {
                       main: '#222831',
                   },
+                  custom: {
+                      text: '#6B6F75',
+                      border: '#6B6F75',
+                  },
               }
             : {
                   primary: {
@@ -26,6 +30,10 @@ export const getDesignTokens = (mode: themeMode) => ({
                   },
                   border: {
                       main: '#EEEEEE',
+                  },
+                  custom: {
+                      text: '#393E46',
+                      border: '#393E46',
                   },
               }),
     },

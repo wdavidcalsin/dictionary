@@ -6,12 +6,19 @@ export interface ISearchContext {
     ) => void;
     handleClickSearchWord: () => void;
     searchWord: string;
-    wordFound: string[];
+    wordFound: IWordFoundState;
+}
+
+export interface IWordFoundState {
+    searchWord: string;
+    definitions: string[];
+    synonyms?: string[];
+    antonyms?: string[];
 }
 
 export interface ISearchState {
     word: string;
     setWord: React.Dispatch<React.SetStateAction<string>>;
-    definitions: string[];
-    setDefinitions: React.Dispatch<React.SetStateAction<string[]>>;
+    wordFound: IWordFoundState;
+    setWordFound: React.Dispatch<React.SetStateAction<IWordFoundState>>;
 }

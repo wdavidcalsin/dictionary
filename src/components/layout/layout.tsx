@@ -5,7 +5,7 @@ import { NavbarHeader } from '../navbar-header';
 
 const Layout: React.FC<Props> = ({ children }) => {
     return (
-        <Box>
+        <Box sx={{ minHeight: '100vh', bgcolor: 'primary.main' }}>
             <NavbarHeader />
             {children}
         </Box>

@@ -2,7 +2,7 @@ import { getDictionaryDefinitionWord } from '@/services';
 import { ISearchContext, ISearchState } from '@/types';
 
 export const searchConstant = (state: ISearchState): ISearchContext => {
-    const { word, setWord, setDefinitions, definitions } = state;
+    const { word, setWord, wordFound, setWordFound } = state;
 
     return {
         handleChangeSearchWord: (event) => {
@@ -13,13 +13,16 @@ export const searchConstant = (state: ISearchState): ISearchContext => {
             const definition = await getDictionaryDefinitionWord(word);
 
             if (definition) {
-                setDefinitions(
-                    definition.map((index, word) => word.toString()).get()
-                );
+                setWordFound({
+                    searchWord: word,
+                    definitions: definition
+                        .map((index, word) => word.toString())
+                        .get(),
+                });
             }
         },
 
         searchWord: word,
-        wordFound: definitions,
+        wordFound: wordFound,
     };
 };
