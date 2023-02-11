@@ -1,6 +1,11 @@
+import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const EmptySearchPrompt = () => {
+interface propsEmptySearch {
+    message: string;
+}
+
+const EmptySearchPrompt: React.FC<propsEmptySearch> = (props) => {
     return (
         <Box
             sx={{
@@ -19,7 +24,7 @@ const EmptySearchPrompt = () => {
                 variant="h5"
                 sx={{ color: 'custom.text', fontSize: '1.2rem' }}
             >
-                Por favor, introduzca una palabra para buscar su definición.
+                {props.message}
             </Typography>
         </Box>
     );

@@ -1,3 +1,4 @@
+import { messageSearchingWords } from '@/constants';
 import { useSearchWord } from '@/hooks';
 import {
     Definition,
@@ -26,11 +27,23 @@ const ShowWordFound = () => {
             >
                 {wordFound.searchWord ? (
                     <>
-                        <Definition />
-                        <LexicalRelations />
+                        {wordFound.definitions.length ? (
+                            <>
+                                <Definition />
+                                <LexicalRelations />
+                            </>
+                        ) : (
+                            <EmptySearchPrompt
+                                message={messageSearchingWords.NODEFINITIONFOUND(
+                                    wordFound.searchWord
+                                )}
+                            />
+                        )}
                     </>
                 ) : (
-                    <EmptySearchPrompt />
+                    <EmptySearchPrompt
+                        message={messageSearchingWords.EMPTYSEARCHWORD}
+                    />
                 )}
             </Box>
         </Box>
