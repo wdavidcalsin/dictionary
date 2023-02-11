@@ -1,5 +1,9 @@
-import { getDictionaryDefinitionWord } from '@/services';
+import {
+    getDictionaryDefinitionWord,
+    getDictionaryLexicalRelationsWord,
+} from '@/services';
 import { ISearchContext, ISearchState } from '@/types';
+import { elementToString } from '@/utils';
 
 export const searchConstant = (state: ISearchState): ISearchContext => {
     const { word, setWord, wordFound, setWordFound } = state;
@@ -12,17 +16,22 @@ export const searchConstant = (state: ISearchState): ISearchContext => {
         handleClickSearchWord: async () => {
             const definition = await getDictionaryDefinitionWord(word);
 
-            if (definition) {
+            const lexicalRelations = await getDictionaryLexicalRelationsWord(
+                word
+            );
+
+            if (definition && lexicalRelations) {
                 setWordFound({
                     searchWord: word,
-                    definitions: definition
-                        .map((index, word) => word.toString())
-                        .get(),
+                    definitions: elementToString(definition),
+                    synonyms: lexicalRelations.synonyms,
+                    antonyms: lexicalRelations.antonyms,
                 });
             }
         },
 
         searchWord: word,
+
         wordFound: wordFound,
     };
 };

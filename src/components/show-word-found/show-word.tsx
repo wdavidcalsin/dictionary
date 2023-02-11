@@ -1,5 +1,9 @@
 import { useSearchWord } from '@/hooks';
-import { Definition, EmptySearchPrompt } from '@/sub-components';
+import {
+    Definition,
+    EmptySearchPrompt,
+    LexicalRelations,
+} from '@/sub-components';
 import { Box } from '@mui/material';
 
 const ShowWordFound = () => {
@@ -19,7 +23,14 @@ const ShowWordFound = () => {
                     height: '100%',
                 }}
             >
-                {wordFound.searchWord ? <Definition /> : <EmptySearchPrompt />}
+                {wordFound.searchWord ? (
+                    <>
+                        <Definition />
+                        <LexicalRelations />
+                    </>
+                ) : (
+                    <EmptySearchPrompt />
+                )}
             </Box>
         </Box>
     );

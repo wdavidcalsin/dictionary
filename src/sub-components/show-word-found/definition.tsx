@@ -12,6 +12,7 @@ const Definition = () => {
                     textAlign: 'left',
                     color: 'secondary.contrastText',
                     fontWeight: 'bold',
+                    paddingY: '1rem',
                 }}
             >
                 Definición : {wordFound.searchWord}

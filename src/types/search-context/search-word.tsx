@@ -12,8 +12,8 @@ export interface ISearchContext {
 export interface IWordFoundState {
     searchWord: string;
     definitions: string[];
-    synonyms?: string[];
-    antonyms?: string[];
+    synonyms: string[];
+    antonyms: string[];
 }
 
 export interface ISearchState {

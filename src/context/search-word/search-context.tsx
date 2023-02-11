@@ -6,7 +6,7 @@ export const searchWordContext = React.createContext<ISearchContext>({
     handleChangeSearchWord: () => null,
     handleClickSearchWord: () => null,
     searchWord: '',
-    wordFound: { searchWord: '', definitions: [] },
+    wordFound: { searchWord: '', definitions: [], synonyms: [], antonyms: [] },
 });
 
 export const SearchWordContextProvider: React.FC<Props> = ({ children }) => {
@@ -14,6 +14,8 @@ export const SearchWordContextProvider: React.FC<Props> = ({ children }) => {
     const [wordFound, setWordFound] = React.useState<IWordFoundState>({
         searchWord: '',
         definitions: [],
+        synonyms: [],
+        antonyms: [],
     });
 
     const search = searchConstant({

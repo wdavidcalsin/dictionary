@@ -1,6 +1,6 @@
-const API_BASE_URL = 'https://www.wordreference.com/definicion/';
+const API_BASE_URL = 'https://www.wordreference.com/sinonimos/';
 
-const apiDictionary = {
+const apiDictionaryLexicalRelations = {
     async get(urlContent: string) {
         try {
             const res = await fetch(`${API_BASE_URL}${urlContent}`);
@@ -11,4 +11,4 @@ const apiDictionary = {
     },
 };
 
-export default apiDictionary;
+export default apiDictionaryLexicalRelations;
