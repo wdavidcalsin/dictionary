@@ -1,6 +1,5 @@
 import { useSearchWord } from '@/hooks';
 import { Stack } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
