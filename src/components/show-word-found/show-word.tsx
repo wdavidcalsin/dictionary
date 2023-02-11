@@ -15,6 +15,7 @@ const ShowWordFound = () => {
                 bgcolor: 'primary.main',
                 display: 'flex',
                 justifyContent: 'center',
+                paddingX: '1rem',
             }}
         >
             <Box

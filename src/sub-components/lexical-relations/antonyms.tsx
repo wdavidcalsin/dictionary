@@ -1,4 +1,5 @@
 import { useSearchWord } from '@/hooks';
+import { dataGridStyled } from '@/styles';
 import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
@@ -48,6 +49,7 @@ const Antonyms = () => {
                     },
                 },
             }}
+            sx={dataGridStyled}
         />
     );
 };

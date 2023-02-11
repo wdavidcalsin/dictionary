@@ -1,4 +1,5 @@
 import { useSearchWord } from '@/hooks';
+import { dataGridStyled } from '@/styles';
 import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
@@ -47,18 +48,7 @@ const Synonyms = () => {
                     },
                 },
             }}
-            sx={{
-                textOverflow: 'initial',
-                overflowX: 'auto',
-                wordWrap: 'break-word',
-
-                '.MuiDataGrid-cellContent': {
-                    textAlign: 'left',
-                    whiteSpace: 'pre-wrap',
-                    overflow: 'visible',
-                    textOverflow: 'initial',
-                },
-            }}
+            sx={dataGridStyled}
         />
     );
 };

@@ -9,7 +9,7 @@ export const colorModeContext = React.createContext<IColorModeContext>({
 });
 
 export const ThemeContextProvider: React.FC<Props> = ({ children }) => {
-    const [mode, setMode] = React.useState<themeMode>('light');
+    const [mode, setMode] = React.useState<themeMode>('dark');
 
     const colorMode = React.useMemo(
         (): IColorModeContext => ({
