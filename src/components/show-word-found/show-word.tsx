@@ -17,6 +17,7 @@ const ShowWordFound = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 paddingX: '1rem',
+                paddingY: '4rem',
             }}
         >
             <Box

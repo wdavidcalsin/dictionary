@@ -16,7 +16,6 @@ const EmptySearchPrompt: React.FC<propsEmptySearch> = (props) => {
                 height: '14rem',
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: '3rem',
                 alignItems: 'center',
             }}
         >

@@ -18,6 +18,7 @@ export const getDesignTokens = (mode: themeMode) => ({
                   custom: {
                       text: '#6B6F75',
                       border: '#6B6F75',
+                      text2: '#00ADB5',
                   },
               }
             : {
@@ -32,8 +33,9 @@ export const getDesignTokens = (mode: themeMode) => ({
                       main: '#EEEEEE',
                   },
                   custom: {
-                      text: '#393E46',
-                      border: '#393E46',
+                      text: '#434850',
+                      border: '#434850',
+                      text2: '#00ADB5',
                   },
               }),
     },

@@ -11,7 +11,6 @@ const SearchWord = () => {
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                paddingBottom: '2rem',
                 bgcolor: 'primary.main',
             }}
         >

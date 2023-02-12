@@ -4,7 +4,7 @@ import Synonyms from './synonyms';
 
 const LexicalRelations = () => {
     return (
-        <Box sx={{ paddingBottom: '5rem' }}>
+        <Box>
             <Typography
                 variant="h5"
                 sx={{

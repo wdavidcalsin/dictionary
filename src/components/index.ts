@@ -1,3 +1,4 @@
+export * from './footer';
 export * from './layout';
 export * from './logo';
 export * from './navbar-header';
