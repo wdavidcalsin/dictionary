@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { SvgIcon } from '@mui/material';
 
-const IconDictionary = React.forwardRef((props, red) => {
+const IconDictionary = React.forwardRef(() => {
     return (
         <svg
             width="100%"

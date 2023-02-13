@@ -19,7 +19,7 @@ const Antonyms = () => {
     const rows = wordFound.antonyms.map((word, index) => {
         return {
             id: index + 1,
-            antonyms: word,
+            antonyms: word.replace('Antónimos:', ''),
         };
     });
 
